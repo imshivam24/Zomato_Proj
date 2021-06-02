@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,render_template
 from flask_cors import CORS
 import util
 
@@ -7,9 +7,9 @@ CORS(app)
 
 
 #Function Decorators
-@app.route('/hello')
-def hello():
-	return 'Hello'
+@app.route('/')
+def home():
+    return render_template('app.html')
 
 @app.route('/get_location_names', methods=['GET'])
 
@@ -58,6 +58,7 @@ def predict_home_price():
 if __name__ == "__main__":
     print("Starting Python Flask Server For Home Price Prediction...")
     util.load_saved_artifacts()
+    app.debug = True
     app.run()
 
 

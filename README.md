@@ -1,4 +1,4 @@
 ## Bangalore Restaraunts Success Predictor
-![](app.PNG)
+![](app.png)
 
 dataset credits:https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants
